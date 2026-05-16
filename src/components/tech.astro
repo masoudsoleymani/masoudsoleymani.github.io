@@ -31,50 +31,27 @@ try {
 
 <section id="tech" class="section-container overflow-hidden">
   <div class="container mx-auto">
-    <div class="tech-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+    <div class="tech-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
       <div>
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext flex items-center gap-4">
           <span class="text-accent">/</span> Tech Stack
         </h2>
-        <p class="text-subtext font-body text-sm max-w-md">
-          Breakdown of my technical skills, categorized by domain and proficiency
-        </p>
-      </div>
-
-      <div class="flex flex-wrap gap-4 p-3 rounded-xl bg-accent/5 border border-accent/10 backdrop-blur-sm">
-        {[
-          { label: "Expert", level: 3 },
-          { label: "Proficient", level: 2 },
-          { label: "Beginner", level: 1 }
-        ].map((item, index) => (
-          <div class={`flex items-center gap-2 ${index > 0 ? 'md:border-l md:border-white/10 md:pl-4' : ''}`}>
-            <div class="flex gap-0.5">
-              {[1, 2, 3].map((star) => (
-                <Icon 
-                  name="mdi:star" 
-                  class={`w-3 h-3 ${star <= item.level ? 'text-accent drop-shadow-[0_0_3px_var(--color-accent)]' : 'text-gray-600'}`} 
-                />
-              ))}
-            </div>
-            <span class="text-[10px] uppercase tracking-wider text-subtext">{item.label}</span>
-          </div>
-        ))}
       </div>
     </div>
 
-    <div class="space-y-10">
+    <div class="space-y-5">
       {categories.map((category) => (
-        <div class="space-y-3">
+        <div class="space-y-2">
           <h3 class="text-maintext font-body text-[11px] uppercase tracking-[0.4em] ml-1">
             {category.title}
           </h3>
           
-          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-5 sm:gap-8">
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-3 sm:gap-3">
             {category.skills.map((skill) => (
               /* 'skill-card' and 'opacity-0' class already maintain reveal animation */
-              <div class="skill-card opacity-0 group relative flex items-stretch min-h-14 rounded-xl bg-accent/5 border border-accent/15 hover:border-accent/40 hover:bg-accent/10 transition-all duration-300">
+              <div class="skill-card opacity-0 group relative flex items-stretch min-h-10 rounded-xl border border-accent/15">
                 
-                <div class="shrink-0 w-12 flex items-center justify-center rounded-l-xl bg-accent/15 transition-colors group-hover:bg-accent/20">
+                <div class="shrink-0 w-12 flex items-center justify-center rounded-l-xl">
                   <Icon name={skill.icon} class="w-7 h-7 group-hover:scale-110 transition-transform" />
                 </div>
                 
@@ -82,19 +59,6 @@ try {
                   <span class="font-body text-maintext/90 text-[13px] leading-tight font-medium tracking-tight line-clamp-2">
                     {skill.name}
                   </span>
-                </div>
-
-                <div class="absolute -bottom-2 -right-1 z-10 flex gap-0 px-1 py-0.5 bg-container rounded-md border border-white/10 shadow-lg group-hover:border-accent/30 transition-all">
-                  {[1, 2, 3].map((star) => (
-                    <Icon 
-                      name="mdi:star" 
-                      class={`w-3 h-3 transition-colors duration-500 ${
-                        star <= skill.level 
-                          ? 'text-accent drop-shadow-[0_0_3px_var(--color-accent)]' 
-                          : 'text-gray-600'
-                      }`} 
-                    />
-                  ))}
                 </div>
               </div>
             ))}

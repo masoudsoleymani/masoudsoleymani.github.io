@@ -4,35 +4,28 @@
     "type": "Enterprise Application",
     "link": "https://developer.daimlertruck.com/",
     "description": "Enterprise API portal built with React, Next.js, TypeScript, GraphQL, authentication, observability, and CI/CD pipelines. Supporting enterprise API platforms with shared modules including GraphQL server and clients.",
-    "tech": ["React", "Next.js", "TypeScript", "GraphQL", "Node.js", "Azure", "GitHub Actions", "Docker", "Azure Application Insights"]
+    "tech": ["React", "Next.js", "TypeScript", "Azure", "GitHub Actions", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
   },
   {
     "title": "API Provider Portal",
     "type": "Enterprise Application",
     "link": "https://provider.dev.na.api.daimlertruck.com/",
     "description": "Provider-facing portal for API management with server-side API routes and OAuth/OIDC integration. Enables secure server-side access to enterprise product catalogs.",
-    "tech": ["React", "Next.js", "TypeScript", "OAuth", "OIDC", "NextAuth"]
+    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
   },
   {
     "title": "API Consumer Portal",
     "type": "Enterprise Application",
     "link": "https://developer.dev.na.api.daimlertruck.com/",
     "description": "Consumer portal for API documentation and access with product metadata and version specifications. Developed server-side API route handlers in Next.js to fetch and manage product metadata.",
-    "tech": ["React", "Next.js", "TypeScript", "GraphQL"]
+    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
   },
   {
-    "title": "UI Component Library",
+    "title": "DT-DDS (UI Component Library)",
     "type": "Open Source",
     "link": "https://github.com/daimlertruck/DT-DDS",
     "description": "Reusable React component library standardizing UI, theming, and development practices across multiple applications. Built and scaled to support enterprise-grade applications.",
     "tech": ["React", "TypeScript", "Monorepo"]
-  },
-  {
-    "title": "Company Showcase Products",
-    "type": "Web Application",
-    "link": "#",
-    "description": "Product showcase website with contact forms for communication with POs and PMs. Features relevant product information and streamlined communication channels.",
-    "tech": ["React", "Next.js", "TypeScript"]
   },
   {
     "title": "Technology Radar",

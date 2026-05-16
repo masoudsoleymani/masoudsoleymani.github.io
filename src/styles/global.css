@@ -59,7 +59,7 @@
 
   /* Strategic Architect - Dark */
   [data-theme="strategic-dark"] {
-    --color-background: #0F172A;
+    --color-background: #090E1A;
     --color-accent: #38BDF8;
     --color-maintext: #F1F5F9;
     --color-subtext: #a0adbf;
@@ -69,7 +69,7 @@
   /* Strategic Architect - Light */
   [data-theme="strategic-light"] {
     --color-background: #F8FAFC;
-    --color-accent: #0284C7;
+    --color-accent: #0369a1;
     --color-maintext: #0F172A;
     --color-subtext: #475569;
     --color-textrain: #9eb9da;

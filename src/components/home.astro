@@ -12,7 +12,6 @@ interface Social {
 interface ProfileData {
   name: string;
   intro: string;
-  introHtml: string;
   socials: Social[];
 }
 
@@ -52,7 +51,7 @@ const { name, intro, socials } = data;
     </div>
   
     <div class="reveal-content" style="animation-delay: 200ms;">
-      <p class="text-gray font-body text-lg leading-relaxed">
+      <p class="text-gray font-body text-base md:text-lg leading-relaxed">
         Hello, I'm
       </p>
     </div>
@@ -63,7 +62,7 @@ const { name, intro, socials } = data;
       </h1>
       <br>
       <p 
-        class="text-gray font-body text-lg leading-relaxed" 
+        class="text-gray font-body text-base md:text-lg leading-relaxed" 
         set:html={intro} 
       />
     </div>
@@ -89,30 +88,31 @@ const { name, intro, socials } = data;
   </section>
 
   <div class="w-full mb-42 reveal-content text-center" style="animation-delay: 600ms;">
-    <h2 class="text-2xl md:text-3xl font-heading font-bold text-maintext mb-8">
+    <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-8">
       What I Do
     </h2>
-    <div class="grid gap-18 sm:grid-cols-1 lg:grid-cols-3">
-      <article class="rounded-3xl border border-accent/15 bg-surface/80 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-md">
-        <h3 class="text-xl font-semibold text-maintext mb-3">Frontend Engineering</h3>
-        <p class="text-gray font-body leading-7">
-          Building scalable web applications with React, Next.js, TypeScript, and modern frontend architecture focused on maintainability, usability, and performance.
-        </p>
-      </article>
 
-      <article class="rounded-3xl border border-accent/15 bg-surface/80 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-md">
-        <h3 class="text-xl font-semibold text-maintext mb-3">API & Fullstack Systems</h3>
-        <p class="text-gray font-body leading-7">
-          Developing API-driven platforms using GraphQL, Node.js, authentication systems, and server-side integrations for enterprise applications.
-        </p>
-      </article>
-
-      <article class="rounded-3xl border border-accent/15 bg-surface/80 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-md">
-        <h3 class="text-xl font-semibold text-maintext mb-3">Performance & Developer Experience</h3>
-        <p class="text-gray font-body leading-7">
-          Improving application performance, reusable architectures, CI/CD workflows, accessibility, observability, and scalable developer tooling.
-        </p>
-      </article>
+    <div class="max-w-4xl mx-auto rounded-3xl border border-accent/15 bg-surface/80 p-8 md:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-md text-left">
+      <ul class="space-y-6">
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl leading-none mt-1">▹</span>
+          <p class="text-gray font-body leading-7">
+            Crafting responsive interfaces with React, Next.js, and TypeScript focused on clarity, accessibility, and maintainable UI architecture.
+          </p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl leading-none mt-1">▹</span>
+          <p class="text-gray font-body leading-7">
+            Integrating RESTful and GraphQL APIs using Node.js, including authentication flows and third-party integrations.
+          </p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl leading-none mt-1">▹</span>
+          <p class="text-gray font-body leading-7">
+            Enhancing application quality through performance tuning, reusable tooling, CI/CD workflows, observability, and developer experience improvements.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
