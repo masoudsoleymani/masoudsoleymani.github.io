@@ -59,7 +59,10 @@ exports.handler = async (event, context) => {
       ${message}
       `;
 
-    const response = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues`, {
+    const githubApiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues`;
+    console.log(`Creating GitHub issue at ${githubApiUrl}`);
+
+    const response = await fetch(githubApiUrl, {
       method: 'POST',
       headers: {
         'Authorization': `token ${GITHUB_TOKEN}`,
@@ -75,7 +78,16 @@ exports.handler = async (event, context) => {
 
     if (!response.ok) {
       const errorData = await response.text();
-      throw new Error(`GitHub API error: ${response.status} - ${errorData}`);
+      console.error(`GitHub API response status: ${response.status}`);
+      console.error(`GitHub API response body: ${errorData}`);
+      return {
+        statusCode: 500,
+        headers: corsHeaders,
+        body: JSON.stringify({
+          error: 'Failed to create issue',
+          details: errorData,
+        }),
+      };
     }
 
     const issueData = await response.json();
