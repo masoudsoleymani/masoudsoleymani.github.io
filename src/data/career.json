@@ -3,22 +3,22 @@
     "title": "API Developer Portal",
     "type": "Enterprise Application",
     "link": "https://developer.daimlertruck.com/",
-    "description": "Enterprise API portal built with React, Next.js, TypeScript, GraphQL, authentication, observability, and CI/CD pipelines. Supporting enterprise API platforms with shared modules including GraphQL server and clients.",
+    "description": "Public facing portal for API management with server-side API routes and OAuth/OIDC integration. Enables secure server-side access to enterprise product catalogs.",
     "tech": ["React", "Next.js", "TypeScript", "Azure", "GitHub Actions", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
   },
   {
     "title": "API Provider Portal",
     "type": "Enterprise Application",
     "link": "https://provider.dev.na.api.daimlertruck.com/",
-    "description": "Provider-facing portal for API management with server-side API routes and OAuth/OIDC integration. Enables secure server-side access to enterprise product catalogs.",
-    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
+    "description": "Enterprise API Providers portal, Managing access to product's subscriptions and API versions specifications. Built with monorepo architecture and Apollo GraphQL as BFF layer.",
+    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight", "GitHub Actions", "Azure"]
   },
   {
     "title": "API Consumer Portal",
     "type": "Enterprise Application",
     "link": "https://developer.dev.na.api.daimlertruck.com/",
-    "description": "Consumer portal for API documentation and access with product metadata and version specifications. Developed server-side API route handlers in Next.js to fetch and manage product metadata.",
-    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight"]
+    "description": "Enterprise API Consumers portal, Managing subscriptions requests to products and API versions specifications. Built with monorepo architecture and Apollo GraphQL as BFF layer.",
+    "tech": ["Turborepo", "React", "Next.js", "TypeScript", "GraphQL", "OAuth", "OIDC", "NextAuth",  "Docker", "Playrwight", "GitHub Actions", "Azure"]
   },
   {
     "title": "DT-DDS (UI Component Library)",
